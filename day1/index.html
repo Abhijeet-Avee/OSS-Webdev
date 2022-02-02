@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //alert("Hello I am in Javascript...!!");
+        // var name = prompt('Enter your name: ');
+        // document.write("Hi your name is: "+name);
+
+        //let vehcile = new Array("car","bike","metro");
+        // for(i in vehicle){
+        //     console.log(vehicle(i));
+        // }
+        // let vehicle = ["car","bike","boat"];
+        // for(i of vehicle){
+        //     console.log(i);
+        // }
+        // let num = [11,2,23,7];
+        // num.sort(function(a, b){return a-b});
+        // for(let temp=0; temp<num.length; temp++){
+        //     console.log(num[temp]);
+        // }
+        // function add(a,b){
+        //     console.log('function add(a,b)');
+        //     return a+b;
+        // }
+
+        function sum(a,b){
+            j=7;                //global after function is called...
+            var i =9;           //Function-scoped, not block scoped, global to function even defined inside a block inside the function
+            console.log(arguments);
+            let sum=0;          //block scope..
+            for(let i=0;i<arguments.length;i++)
+                sum+=arguments[i];
+            return sum;
+        }
+       // console.log(j);         //will throw uncaught reference error
+        // sum(4,5);
+        // console.log(j);           //will work now..
+        console.log(`Sum value: ${sum(2,6)}`); 
+        // console.log(sum(2,3,4,5));
+        console.log(x);             //hoisitng concept, accessible but not initialized..
+        var x = 9;                  //initialized after printing console..
+    </script>
+</body>
+</html>
